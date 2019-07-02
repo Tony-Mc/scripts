@@ -6,11 +6,24 @@ You can also add this directory to system `PATH` to have easier access to the sc
 
 ## git-clean
 
-### Usage
+Deletes all local merged branches except current branch and `master`.
+Fetches remote with prune.
 
+### Requirements
+`git`
+
+### Usage
 ```
 $ git-clean.sh
 ```
+## nuget-clear
 
-Deletes all local merged branches except current branch and `master`.
-Fetches remote with prune.
+Clears all NuGet caches.
+
+### Requirements
+`dotnet`
+
+### Usage
+```
+$ nuget-clear.sh
+```
