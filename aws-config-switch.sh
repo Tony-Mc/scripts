@@ -1,3 +1,5 @@
+set -e
+
 root_config_folder="$HOME/.aws"
 
 if [ ! -d $root_config_folder ]; then
