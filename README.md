@@ -40,3 +40,27 @@ Stops all Docker containers that are running.
 ```
 $ docker-stop.sh
 ```
+
+## aws-config-list
+
+Lists all available AWS CLI configurations.
+
+### Requirements
+Subfolders containing different configurations in main AWS configuration folder.
+
+### Usage
+```
+$ aws-config-list.sh
+```
+
+## aws-config-switch
+
+Switches to specified AWS CLI configuration.
+
+### Requirements
+Subfolders containing different configurations in main AWS configuration folder.
+
+### Usage
+```
+$ aws-config-switch.sh "config_name"
+```
