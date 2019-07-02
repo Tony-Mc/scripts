@@ -16,6 +16,7 @@ Fetches remote with prune.
 ```
 $ git-clean.sh
 ```
+
 ## nuget-clear
 
 Clears all NuGet caches.
@@ -26,4 +27,16 @@ Clears all NuGet caches.
 ### Usage
 ```
 $ nuget-clear.sh
+```
+
+## docker-stop
+
+Stops all Docker containers that are running.
+
+### Requirements
+`docker`
+
+### Usage
+```
+$ docker-stop.sh
 ```
