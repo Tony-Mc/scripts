@@ -1,3 +1,4 @@
+set -e
 source "utils/exists.sh"
 
 found=$(commandExists "dotnet")
