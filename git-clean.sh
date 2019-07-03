@@ -1,5 +1,5 @@
 set -e
-source "utils/exists.sh"
+source "${BASH_SOURCE%/*}/utils/exists.sh"
 
 found=$(commandExists "git")
 
