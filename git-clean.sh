@@ -11,7 +11,7 @@ else
     master="master"
 
     echo "Looking for local merged branches..."
-    filtered=$(git branch --merged | egrep -v "(^$current|$master)")
+    filtered=$(git branch --merged | egrep -v "(^$current|$master)" || true)
 
     if [ -z "$filtered" ]
     then
