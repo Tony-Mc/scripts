@@ -58,3 +58,25 @@ Stops all Docker containers that are running.
 ```
 $ docker-stop.sh
 ```
+
+## docker-new-postgres
+
+Runs a new Postgres container on `docker`.
+
+### Requirements
+- `docker`
+
+### Parameters
+- $1 - name **(required)**
+- $2 - port *(optional, default: 5432)*. 
+- $3 - password *(optional, default: password)*.
+
+### Usage
+```
+$ docker-new-postgres.sh "mydb"
+$ docker-new-postgres.sh "mydb" 1234
+$ docker-new-postgres.sh "mydb" 1234 "otherPassword"
+```
+
+### Notes
+This script is intended to be used for development purposes only.
