@@ -4,10 +4,10 @@
 ```csv
 Package,Version,Skip
 chocolatey
-git
+git,,true
 dotnetcore-sdk
 nodejs
-awscli
+awscli,1.17.13
 ```
 
 ### Configuration
