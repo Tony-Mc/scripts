@@ -1,4 +1,12 @@
-$packages = import-csv packages.csv
+param([string]$path = "packages.csv")
+
+if ([System.IO.File]::Exists($path)) {
+    $packages = import-csv $file
+}
+else {
+    write-host "File not found at $path"
+    exit 1
+}
 
 foreach ($package in $packages) {
     if ($package.Skip) {
