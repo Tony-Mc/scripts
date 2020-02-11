@@ -1,7 +1,7 @@
 param([string]$path = "packages.csv")
 
 if ([System.IO.File]::Exists($path)) {
-    $packages = import-csv $file
+    $packages = import-csv $path
 }
 else {
     write-host "File not found at $path"
