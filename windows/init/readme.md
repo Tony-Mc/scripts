@@ -1,6 +1,6 @@
 # install-packages
 
-## Package list example
+## Package list
 ```csv
 Package,Version,Skip
 chocolatey
@@ -9,6 +9,16 @@ dotnetcore-sdk
 nodejs
 awscli
 ```
+
+### Configuration
+#### Package
+Choco package id, **required**.
+#### Version
+Package version, _optional_.
+
+When provided the script will install the specified version, otherwise latest.
+#### Skip
+Set to `true` to skip installing a package, _optional_.
 
 ## Scheduling as a Windows Task
 `Actions` -> `Start Program`
