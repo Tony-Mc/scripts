@@ -1,5 +1,7 @@
 param([string]$path = "packages.csv")
 
+Start-Transcript -Path "$($path).log" -Append -IncludeInvocationHeader
+
 if ([System.IO.File]::Exists($path)) {
     $packages = import-csv $path
 }
@@ -14,14 +16,17 @@ foreach ($package in $packages) {
         continue;
     }
     
-    if ($package.Version) {
-        write-host "Installing $($package.Package) $($package.Version)"
-        
-        choco upgrade $package.Package --version=$($package.Version) --yes
-    }
-    else {
-        write-host "Installing $($package.Package)"
+    $args = @("upgrade", "$($package.Package)", "--yes")
 
-        choco upgrade $package.Package --yes
+    if ($package.Version) {
+        $args += "--version=$($package.Version)"
     }
+
+    if ($package.Force) {
+        $args += "--force"
+    }
+
+    Invoke-Expression "choco $args"
 }
+
+Stop-Transcript
